@@ -1,0 +1,15 @@
+.container{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.video-container{
+}
+.video-card{
+
+}
+.highlight{
+  background-color: #ddd;
+  border: #FF5722 3px solid;
+  border-radius: 5px;
+}
