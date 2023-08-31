@@ -15,3 +15,25 @@
 <div appClass [display]="{'container': true, 'change-font': true}">
   <p>This is a demo html content to understand how to create custom ngClass directive in Angular</p>
 </div>
+
+<div class="container" appStyle [setStyle]="{backgroundColor: active ? 'green' : 'red', color: 'white', fontWeight: 'bold'}">
+  <p>This is a demo html content to understand how to create custom ngStyle directive in Angular</p>
+</div>
+
+<button class="btn btn-notice" (click)="displayNotice()">Show Notice</button>
+<div class="info-container notice" *appIf="display">
+  <h3>This is important notice!</h3>
+  <p>This is a notice issued for all website users.</p>
+</div>
+<p *appIf="10 < 5">This is a demo paragraph</p>
+
+<!-- <ng-template #myVar>
+<p>This is an example paragraph.</p>
+</ng-template> -->
+
+<div class="container" [ngSwitch]="occupation">
+  <p *ngSwitchCase="'teacher'">This paragraph will be displayed when occupation is teacher.</p>
+  <p *ngSwitchCase="'designer'">This paragraph will be displayed when occupation is designer.</p>
+  <p *ngSwitchCase="'lawyer'">This paragraph will be displayed when occupation is lawyer.</p>
+  <p *ngSwitchDefault="">This paragraph is default and will be displayed if no case matches switch expression.</p>
+</div>
